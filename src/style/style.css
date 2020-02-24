@@ -59,8 +59,8 @@ a:hover {
 }
 
 .header-logo {
-  width: 110px;
-  height: 50px;
+  width: 140px;
+  height: 80px;
 }
 
 section {
@@ -68,7 +68,7 @@ section {
 }
 
 .intro__text {
-  font-size: 1.3em;
+  font-size: 1.5em;
   padding: 0 30px;
 }
 
@@ -76,9 +76,17 @@ section {
   margin-bottom: 20px;
 }
 
+strong {
+  font-weight: 600;
+}
+
 .video__card {
   -webkit-box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+}
+
+.video__card:hover {
+  opacity: 0.95;
 }
 
 .video__title {
