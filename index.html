@@ -5,11 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="description" content="Конкурс профмастерства">
-        <link rel="shortcut icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="./src/img/favicon.ico" type="image/x-icon">
         <title>Конкурс профмастерства</title>
         <!-- Bootstrap 4 styles -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap&subset=cyrillic" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
         <!-- Animation -->
         <link rel="stylesheet" href="./src/style/animate-min.css">
@@ -17,6 +18,8 @@
         <link rel="stylesheet" href="./src/style/reset.css">
         <!-- CSS styles -->
         <link rel="stylesheet" href="./src/style/style.css">
+        <!--JS videoplayer-->
+        <script type="text/javascript" src="//player.wowza.com/player/latest/wowzaplayer.min.js"></script>
     </head>
     <body>
         <!-- !HEADER -->
@@ -26,7 +29,7 @@
                     <h1 class="visually-hidden">Конкурс профессионального мастерства</h1>
                     <div class="col-lg-2">
                         <a href="http://127.0.0.1:5500/index.html" title="На главную страницу">
-                            <img style="background-color: blue;" class="header-logo" alt="логотип" width="110" height="65">
+                            <img src="./src/img/logo-btc.svg" class="header-logo" alt="логотип">
                         </a>
                     </div>
                 </div>
@@ -37,10 +40,11 @@
         <main class="main">
             <section class="intro">
                 <div class="container">
-                    <h2 class="title advantages__title">О конкурсе</h2>
+                    <h2 class="visually-hidden">О конкурсе</h2>
                     <div class="row">
                         <div class="col-lg-12">
-                            <p class="text-center">Что? Где? Когда?</p>
+                            <p class="intro__text text-center">Республиканский конкурс профессионального мастерства «Монтаж и эксплуатация волоконно-оптических линий электросвязи» пройдёт 26 февраля 2020 года на базе Минского филиала РУП "Белтелеком".</p>
+                            <p class="intro__text text-center">За победу в соревнованиях будут бороться представители семи филиалов, ставшие лидерами областных этапов.</p>
                         </div>
                     </div>
                 </div>
@@ -48,54 +52,167 @@
 
             <section class="video">
                 <div class="container">
-                    <h2 class="title advantages__title">Видео-ролики</h2>
+                    <h2 class="title video__title">Видео-трансляция конкурса</h2>
                     <!-- Grid row -->
                     <div class="row">
 
                         <div class="col-lg-6 col-md-12 mb-4">
                             <div class="video__card">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oohMYc2lCvg" allowfullscreen></iframe>
-                                </div>
-                                <p>Текст с описанием</p>
+                                <div id="playerElement1" style="width:100%; height:0; padding:0 0 56.25% 0"></div>
+                                <script type="text/javascript">
+                                    WowzaPlayer.create("playerElement1",
+                                    {
+                                    "license":"PLAY2-99DQP-Ud38d-Y76v3-rUJ3G-wE8wy",
+                                    "sources":[{
+                                    "sourceURL":"https://stream2.dc.beltelecom.by/video-svarka/vpn-svarka.stream/playlist.m3u8"
+                                    },
+                                    {
+                                    "sourceURL":""
+                                    }],
+                                    "title":"kamera 1",
+                                    "description":"Прямая трансляция из DK MTZ",
+                                    "autoPlay":false,
+                                    "mute":false,
+                                    "volume":75,
+                                    "sourceURL":"https://stream2.dc.beltelecom.by/video-svarka/vpn-svarka.stream/playlist.m3u8",
+                                    "posterFrameURL":"" 
+                                    }
+                                    );
+                                </script>
                             </div>
-                        </div>
-                        
-                          
-                        <div class="col-lg-6 col-md-12 mb-4">
-                            <div class="video__card">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/w6mxCd4TS7g" allowfullscreen></iframe>
-                                </div>
-                                <p>Текст с описанием</p>
-                            </div>  
                         </div>
 
                         <div class="col-lg-6 col-md-12 mb-4">
                             <div class="video__card">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Eal1GpGlDMc" allowfullscreen></iframe>
-                                </div>
-                                <p>Текст с описанием</p>
+                                <div id="playerElement2" style="width:100%; height:0; padding:0 0 56.25% 0"></div>
+                                <script type="text/javascript">
+                                    WowzaPlayer.create("playerElement2",
+                                    {
+                                    "license":"PLAY2-99DQP-Ud38d-Y76v3-rUJ3G-wE8wy",
+                                    "sources":[{
+                                    "sourceURL":"https://stream2.dc.beltelecom.by/video-svarka/vpn-svarka2.stream/playlist.m3u8"
+                                    },
+                                    {
+                                    "sourceURL":""
+                                    }],
+                                    "title":"kamera 2",
+                                    "description":"Прямая трансляция из DK MTZ",
+                                    "autoPlay":false,
+                                    "mute":false,
+                                    "volume":75,
+                                    "sourceURL":"https://stream2.dc.beltelecom.by/video-svarka/vpn-svarka2.stream/playlist.m3u8",
+                                    "posterFrameURL":"" 
+                                    }
+                                    );
+                                    </script>
                             </div>
                         </div>
 
                         <div class="col-lg-6 col-md-12 mb-4">
                             <div class="video__card">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3rvZIrGp1ws" allowfullscreen></iframe>
-                                </div>
-                                <p>Текст с описанием</p>
+                                <div id="playerElement3" style="width:100%; height:0; padding:0 0 56.25% 0"></div>
+                                <script type="text/javascript">
+                                    WowzaPlayer.create("playerElement3",
+                                    {
+                                    "license":"PLAY2-99DQP-Ud38d-Y76v3-rUJ3G-wE8wy",
+                                    "sources":[{
+                                    "sourceURL":"https://stream2.dc.beltelecom.by/video-svarka/vpn-svarka3.stream/playlist.m3u8"
+                                    },
+                                    {
+                                    "sourceURL":""
+                                    }],
+                                    "title":"kamera 3",
+                                    "description":"Прямая трансляция из DK MTZ",
+                                    "autoPlay":false,
+                                    "mute":false,
+                                    "volume":75,
+                                    "sourceURL":"https://stream2.dc.beltelecom.by/video-svarka/vpn-svarka3.stream/playlist.m3u8",
+                                    "posterFrameURL":"" 
+                                    }
+                                    );
+                                </script>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-12 mb-4">
+                            <div class="video__card">
+                                <div id="playerElement4" style="width:100%; height:0; padding:0 0 56.25% 0"></div>
+                                <script type="text/javascript">
+                                    WowzaPlayer.create("playerElement4",
+                                        {
+                                        "license":"PLAY2-99DQP-Ud38d-Y76v3-rUJ3G-wE8wy",
+                                        "sources":[{
+                                        "sourceURL":"https://stream2.dc.beltelecom.by/video-svarka/vpn-svarka4.stream/playlist.m3u8"
+                                        },
+                                        {
+                                        "sourceURL":""
+                                        }],
+                                        "title":"kamera 4",
+                                        "description":"Прямая трансляция из DK MTZ",
+                                        "autoPlay":false,
+                                        "mute":false,
+                                        "volume":75,
+                                        "sourceURL":"https://stream2.dc.beltelecom.by/video-svarka/vpn-svarka4.stream/playlist.m3u8",
+                                        "posterFrameURL":"" 
+                                        }
+                                    );
+                                </script>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-12 mb-4">
+                            <div class="video__card">
+                                <div id="playerElement5" style="width:100%; height:0; padding:0 0 56.25% 0"></div>
+                                <script type="text/javascript">
+                                WowzaPlayer.create("playerElement5",
+                                    {
+                                    "license":"PLAY2-99DQP-Ud38d-Y76v3-rUJ3G-wE8wy",
+                                    "sources":[{
+                                    "sourceURL":"https://stream2.dc.beltelecom.by/video-svarka/vpn-svarka5.stream/playlist.m3u8"
+                                    },
+                                    {
+                                    "sourceURL":""
+                                    }],
+                                    "title":"kamera 5",
+                                    "description":"Прямая трансляция из DK MTZ",
+                                    "autoPlay":false,
+                                    "mute":false,
+                                    "volume":75,
+                                    "sourceURL":"https://stream2.dc.beltelecom.by/video-svarka/vpn-svarka5.stream/playlist.m3u8",
+                                    "posterFrameURL":"" 
+                                    }
+                                );
+                                </script>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-12 mb-4">
+                            <div class="video__card">
+                                <div id="playerElement6" style="width:100%; height:0; padding:0 0 56.25% 0"></div>
+                                <script type="text/javascript">
+                                WowzaPlayer.create("playerElement6",
+                                    {
+                                    "license":"PLAY2-99DQP-Ud38d-Y76v3-rUJ3G-wE8wy",
+                                    "sources":[{
+                                    "sourceURL":"https://stream2.dc.beltelecom.by/video-svarka/vpn-svarka6.stream/playlist.m3u8"
+                                    },
+                                    {
+                                    "sourceURL":""
+                                    }],
+                                    "title":"kamera 6",
+                                    "description":"Прямая трансляция из DK MTZ",
+                                    "autoPlay":false,
+                                    "mute":false,
+                                    "volume":75,
+                                    "sourceURL":"https://stream2.dc.beltelecom.by/video-svarka/vpn-svarka6.stream/playlist.m3u8",
+                                    "posterFrameURL":"" 
+                                    }
+                                );
+                                </script>
                             </div>
                         </div>
 
                     </div>
-                </div>
-            </section>
-
-            <section class="contacts">
-                <div class="container">
-                    <h2 class="title help__title">Наши контакты</h2>
                 </div>
             </section>
         </main>
@@ -105,30 +222,35 @@
             <div class="container">
                 <div class="row">
                     <h2 class="visually-hidden">Наши социальные сети</h2>
-                    <div class="col-lg-8 col-md-12">
+                    <div class="col-lg-5 col-md-5 col-sm-12">
+                        <p class="copyright">
+                            Минский филиал РУП «Белтелеком»
+                        </p>
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-sm-12">
                         <ul class="social-icon d-flex">
                             <li class="social-icon__item">
-                                <a href="" class="social-icon__link" target="_blank" rel="nofollow noreferrer" aria-label="Перейти в группу twitter">
+                                <a href="https://twitter.com/BeltelecomBy" class="social-icon__link" target="_blank" rel="nofollow noreferrer" aria-label="Перейти в группу twitter">
                                 <i class="fab fa-twitter"></i>
                                 </a>
                             </li>
                             <li class="social-icon__item">
-                                <a href="" class="social-icon__link" target="_blank" rel="nofollow noreferrer" aria-label="Перейти в группу вконтакте">
+                                <a href="https://vk.com/bybeltelecom" class="social-icon__link" target="_blank" rel="nofollow noreferrer" aria-label="Перейти в группу вконтакте">
                                 <i class="fab fa-vk"></i>
                                 </a>
                             </li>
                             <li class="social-icon__item">
-                                <a href="" class="social-icon__link" target="_blank" rel="nofollow noreferrer" aria-label="Перейти в группу instagram">
+                                <a href="https://www.instagram.com/beltelecomby" class="social-icon__link" target="_blank" rel="nofollow noreferrer" aria-label="Перейти в группу instagram">
                                 <i class="fab fa-instagram"></i>
                                 </a>
                             </li>
                             <li class="social-icon__item">
-                                <a href="" class="social-icon__link" target="_blank" rel="noreferrer" aria-label="Перейти в группу facebook">
+                                <a href="https://www.facebook.com/beltelecomby" class="social-icon__link" target="_blank" rel="noreferrer" aria-label="Перейти в группу facebook">
                                 <i class="fab fa-facebook-f"></i>
                                 </a>
                             </li>
                             <li class="social-icon__item">
-                                <a href="" class="social-icon__link" target="_blank" rel="nofollow noreferrer" aria-label="Перейти в группу Одноклассники">
+                                <a href="https://ok.ru/beltelecomby" class="social-icon__link" target="_blank" rel="nofollow noreferrer" aria-label="Перейти в группу Одноклассники">
                                 <i class="fab fa-odnoklassniki"></i>
                                 </a>
                             </li>

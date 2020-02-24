@@ -1,5 +1,5 @@
 body {
-  font-family: "Rubik", "Roboto", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 300;
   color: #424241;
   background-color: #fff;
@@ -30,6 +30,7 @@ a:hover {
 .title {
   text-transform: uppercase;
   font-weight: 700;
+  font-size: 2em;
   letter-spacing: 1px;
   word-spacing: 4px;
   margin-bottom: 50px;
@@ -38,7 +39,7 @@ a:hover {
 
 .header {
   padding-top: 5px;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
   margin-bottom: 80px;
   width: 100%;
   -webkit-box-pack: end;
@@ -58,21 +59,41 @@ a:hover {
 }
 
 .header-logo {
-  margin-top: 8px;
+  width: 110px;
+  height: 50px;
 }
 
 section {
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 
-.intro {
-  margin-top: 50px;
+.intro__text {
+  font-size: 1.3em;
+  padding: 0 30px;
+}
+
+.intro__text:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.video__card {
+  -webkit-box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+}
+
+.video__title {
+  text-align: center;
 }
 
 .footer {
   padding-top: 15px;
   padding-bottom: 10px;
-  background-color: #282828;
+  background-color: #003C78;
+}
+
+.copyright {
+  color: #fff;
+  font-size: .9em;
 }
 
 .social-icon {
@@ -87,7 +108,7 @@ section {
 }
 
 .social-icon .fab {
-  font-size: 21px;
+  font-size: 1.3em;
 }
 
 .social-icon__link:hover {
@@ -102,23 +123,38 @@ section {
     -ms-flex-direction: column;
     flex-direction: column;
   }
-  .footer .social-icon {
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    margin: 0 auto;
-  }
-  .footer .social-icon__item {
-    margin-right: 0;
-  }
 }
 
 @media (max-width: 767.98px) {
   .header .nav {
     margin: 0 auto;
   }
+  .footer .social-icon {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .footer .social-icon__item:not(:last-child) {
+    margin-right: 20px;
+  }
+  .footer .social-icon__item:last-child {
+    margin-right: 0;
+  }
+  .copyright {
+    text-align: center;
+  }
 }
 
 @media (max-width: 575.98px) {
+  section {
+    margin-bottom: 80px;
+  }
+  .title {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+  }
   .header {
     margin-bottom: 80px;
   }
@@ -127,8 +163,12 @@ section {
     display: block;
     margin: 0 auto;
   }
+  .intro__text {
+    font-size: 1em;
+    padding: 0 10px;
+  }
   .social-icon .fab {
-    font-size: 21px;
+    font-size: 1.2em;
   }
 }
 /*# sourceMappingURL=style.css.map */
