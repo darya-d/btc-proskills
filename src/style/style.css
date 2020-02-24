@@ -38,18 +38,18 @@ a:hover {
   font-weight: 700;
   letter-spacing: 1px;
   word-spacing: 4px;
+  margin-bottom: 50px;
   color: #424241;
 }
 
 .header {
-  position: fixed;
   padding-top: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 15px;
+  margin-bottom: 80px;
   width: 100%;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  z-index: 10;
   background-color: #fff;
   -webkit-box-shadow: 0 4px 10px 0px rgba(0, 0, 0, 0.05);
   box-shadow: 0 4px 10px 0px rgba(0, 0, 0, 0.05);
@@ -67,10 +67,18 @@ a:hover {
   margin-top: 8px;
 }
 
+section {
+  margin-bottom: 150px;
+}
+
+.intro {
+  margin-top: 50px;
+}
+
 .footer {
-  padding-top: 25px;
+  padding-top: 15px;
   padding-bottom: 10px;
-  background-color: #4765af;
+  background-color: #282828;
 }
 
 .social-icon {
@@ -85,7 +93,7 @@ a:hover {
 }
 
 .social-icon .fab {
-  font-size: 24px;
+  font-size: 21px;
 }
 
 .social-icon__link:hover {
@@ -93,9 +101,6 @@ a:hover {
 }
 
 @media screen and (max-width: 991.98px) {
-  .header {
-    position: inherit;
-  }
   .header .nav {
     margin: 0 auto;
     -webkit-box-orient: vertical;

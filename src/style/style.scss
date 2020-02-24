@@ -3,6 +3,7 @@ $color-white: #fff;
 $color-blue: #4765af;
 $color-black-text: #424241;
 $color-gray-text: #9c9397;
+$color-gray: #282828;
 // Opacity for interactions
 $opacity-hover: 0.9;
 // Margins
@@ -50,19 +51,19 @@ a:hover {
     font-weight: 700;
     letter-spacing: 1px;
     word-spacing: 4px;
+    margin-bottom: $margin-b-title;
     color: $color-black-text;
 }
 
 // *HEADER
 .header {
-    position: fixed;
     padding-top: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
+    margin-bottom: 80px;
     width: 100%;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    z-index: 10;
     background-color: $color-white;
     -webkit-box-shadow: 0 4px 10px 0px rgba(0, 0, 0, 0.05);
     box-shadow: 0 4px 10px 0px rgba(0, 0, 0, 0.05);
@@ -82,13 +83,20 @@ a:hover {
 
 
 // *MAIN
+section {
+    margin-bottom: $margin-b-section;
+}
+
+.intro {
+    margin-top: 50px;
+}
 
 
 // *FOOTER
 .footer {
-    padding-top: 25px;
+    padding-top: 15px;
     padding-bottom: 10px;
-    background-color: $color-blue;
+    background-color: $color-gray;
 }
 
 .social-icon {
@@ -103,7 +111,7 @@ a:hover {
 }
 
 .social-icon .fab {
-    font-size: 24px;
+    font-size: 21px;
 }
 
 .social-icon__link:hover {
@@ -114,7 +122,6 @@ a:hover {
 // !Media queries
 @media screen and (max-width: 991.98px) {
     .header {
-        position: inherit;
         .nav {
             margin: 0 auto;
             -webkit-box-orient: vertical;
